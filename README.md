@@ -3,6 +3,7 @@
 This repository contains assignment notebooks and class material for Semester 2 AI & Data Science at IIT Jodhpur.
 
 ## 📚 Topics
+
 - Foundations of AI
 - Numerical Optimization
 - Pattern Recognition Principles
@@ -15,6 +16,7 @@ Each folder contains:
 - Graphs + figures
 
 ## 🚀 How to Run
+
 1. Clone the repo
 2. Install dependencies:
    - networkx
@@ -28,6 +30,7 @@ Each folder contains:
 > All plots and outputs are already rendered in the notebooks.
 
 ## 📁 Important Files
+
 - `Experiment/` — Example graph assignment
 - `Foundations of AI/` — Theoretical notebooks + Practical Notebooks
 - `Numerical Optimization\` — Theoretical notebooks + Practical Notebooks

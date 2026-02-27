@@ -25,7 +25,7 @@ Each folder contains:
 
 - 🔭 I’m currently working on **Documenting Semester 2**
 
-- 📫 How to reach me **s12sakib.md@gmail.com**
+- 📫 How to reach me <a href="s12sakib.md@gmail.com">s12sakib.md@gmail.com</a>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

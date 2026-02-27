@@ -20,7 +20,7 @@ Each folder contains:
 3. pip install -r requirements.txt
 4. Launch notebooks -->
 
-<h1 align="center">Hi 👋, I'm MD Sakib</h1>
+<!-- <h1 align="center">Hi 👋, I'm MD Sakib</h1>
 <h3 align="center">A passionate frontend developer from India</h3>
 
 - 🔭 I’m currently working on **Documenting Semester 2**
@@ -51,4 +51,32 @@ Each folder contains:
 1. Clone the repo
 2. Install Python
 3. pip install -r requirements.txt
-4. Launch notebooks
+4. Launch notebooks -->
+
+
+<!-- # IITJ – Semester 2 – AI & Data Science -->
+
+This repository documents my coursework for Semester 2 at IIT Jodhpur.
+
+## Subjects
+- Foundations of Artificial Intelligence
+- Numerical Optimization
+- Pattern Recognition Principles
+- Visualization & Storytelling with Data
+
+## Repository Structure
+Each subject folder contains:
+- Concept notes
+- Assignment notebooks
+- Visualizations
+- Experiments
+
+## Tech Stack
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- scikit-learn
+
+## Contact
+📫 s12sakib.md@gmail.com

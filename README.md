@@ -1,5 +1,30 @@
 # IITJ-Sem2-AI-DS
 
+This repository documents my coursework for Semester 2 at IIT Jodhpur.
+
+## Subjects
+- Foundations of Artificial Intelligence
+- Numerical Optimization
+- Pattern Recognition Principles
+- Visualization & Storytelling with Data
+
+## Repository Structure
+Each subject folder contains:
+- Concept notes
+- Assignment notebooks
+- Visualizations
+- Experiments
+
+## Tech Stack
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- scikit-learn
+
+## Contact
+📫 s12sakib.md@gmail.com
+
 <!-- This repository contains assignment notebooks and class material for Semester 2 AI & Data Science at IIT Jodhpur.
 
 ## 📚 Topics
@@ -25,6 +50,7 @@ Each folder contains:
 
 - 🔭 I’m currently working on **Documenting Semester 2**
 
+- 📬 How to reach me <a href = "mailto:s12sakib.md@gmail.com"> s12sakib.md@gmail.com </a>
 - 📬 **How to reach me:** [s12sakib.md@gmail.com](mailto:s12sakib.md@gmail.com)
 
 <h3 align="left">Connect with me:</h3>
@@ -55,28 +81,3 @@ Each folder contains:
 
 
 <!-- # IITJ – Semester 2 – AI & Data Science -->
-
-This repository documents my coursework for Semester 2 at IIT Jodhpur.
-
-## Subjects
-- Foundations of Artificial Intelligence
-- Numerical Optimization
-- Pattern Recognition Principles
-- Visualization & Storytelling with Data
-
-## Repository Structure
-Each subject folder contains:
-- Concept notes
-- Assignment notebooks
-- Visualizations
-- Experiments
-
-## Tech Stack
-- Python
-- NumPy
-- Pandas
-- Matplotlib
-- scikit-learn
-
-## Contact
-📫 s12sakib.md@gmail.com

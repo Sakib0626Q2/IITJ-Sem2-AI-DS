@@ -1,0 +1,135 @@
+# ============================================================
+# .gitignore for IITJ-Sem2-AI-DS
+# Python | Jupyter Notebook | VS Code | Windows
+# ============================================================
+
+
+# ------------------------------------------------------------
+# JUPYTER NOTEBOOK CHECKPOINTS
+# ------------------------------------------------------------
+# Every time you save a .ipynb file, Jupyter automatically
+# creates a backup copy inside a hidden folder called
+# .ipynb_checkpoints/. You never need this in Git — it's just
+# Jupyter's internal autosave. Without this line, every repo
+# push would include these junk copies.
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+
+# ------------------------------------------------------------
+# PYTHON CACHE FILES
+# ------------------------------------------------------------
+# When Python runs a .py file, it compiles it to bytecode and
+# stores it in __pycache__/ as .pyc files. This speeds up
+# future runs. But they're machine-generated and machine-
+# specific — there's zero reason to commit them.
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# ------------------------------------------------------------
+# VIRTUAL ENVIRONMENTS
+# ------------------------------------------------------------
+# If you ever create a virtual environment (venv) to isolate
+# your Python packages, the folder can be 100MB+. Never commit
+# it. Instead, commit a requirements.txt file so others can
+# recreate it. The names below are the most common venv folder
+# names people use.
+venv/
+env/
+.env/
+.venv/
+
+
+# ------------------------------------------------------------
+# VS CODE SETTINGS
+# ------------------------------------------------------------
+# VS Code stores your personal editor settings (theme, font
+# size, keybindings, extensions) in a .vscode/ folder. These
+# are YOUR preferences, not part of the project. Committing
+# them forces your settings on everyone else who clones the
+# repo — including future you on a different machine.
+#
+# EXCEPTION: If you want to share specific settings with
+# collaborators (like recommended extensions), you can
+# un-ignore specific files, e.g.:
+#   !.vscode/extensions.json
+.vscode/
+
+
+# ------------------------------------------------------------
+# LARGE DATA FILES
+# ------------------------------------------------------------
+# Datasets, especially CSVs and Excel files, can be huge.
+# Git is not designed to store large binary or data files —
+# it slows down the repo significantly. If your dataset is
+# small (under ~5MB), it's fine to commit. But it's good
+# practice to ignore common data formats by default and only
+# explicitly add small ones when needed with:
+#   git add -f data/small_file.csv
+#
+# Note: You already have a dataset/ folder in Pattern
+# Recognition — check its size before your next push.
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+
+
+# ------------------------------------------------------------
+# IMAGES AND OUTPUTS (generated ones)
+# ------------------------------------------------------------
+# Matplotlib and seaborn plots saved as files, or any
+# auto-generated output images. If you intentionally want
+# to commit a specific visualization, use:
+#   git add -f my_plot.png
+# But don't let generated outputs pile up automatically.
+# *.png    ← commented out because you may want to commit
+# *.jpg       diagrams or reference images intentionally.
+#             Uncomment if you find images cluttering your repo.
+
+
+# ------------------------------------------------------------
+# ENVIRONMENT VARIABLE FILES
+# ------------------------------------------------------------
+# If you ever use API keys, passwords, or secrets (e.g., for
+# a future project using OpenAI API, cloud services, etc.),
+# they go in a .env file. This line ensures you NEVER
+# accidentally push secrets to a public GitHub repo.
+# This is a critical security habit to build early.
+.env
+*.env
+
+
+# ------------------------------------------------------------
+# OS-GENERATED FILES
+# ------------------------------------------------------------
+# Windows creates Thumbs.db (thumbnail cache) and desktop.ini
+# in every folder. macOS creates .DS_Store files. These are
+# completely irrelevant to your code and should never appear
+# in a repo.
+Thumbs.db
+desktop.ini
+.DS_Store
+
+
+# ------------------------------------------------------------
+# JUPYTER NOTEBOOK OUTPUT STRIPPING (optional but recommended)
+# ------------------------------------------------------------
+# This doesn't go in .gitignore, but worth knowing:
+# Notebook outputs (graphs, print statements, model outputs)
+# are saved inside the .ipynb file itself as JSON. This means
+# every time you re-run a cell, Git sees the entire notebook
+# as "changed" even if your code didn't change.
+# 
+# To fix this, consider using `nbstripout` — a tool that
+# automatically strips outputs before committing:
+#   pip install nbstripout
+#   nbstripout --install   (run once in your repo folder)
+#
+# This keeps your diffs clean and your commits meaningful.

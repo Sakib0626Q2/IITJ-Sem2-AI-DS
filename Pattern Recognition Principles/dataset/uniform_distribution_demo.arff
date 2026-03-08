@@ -1,0 +1,46 @@
+@RELATION uniform_distribution_demo
+
+@ATTRIBUTE value NUMERIC
+@ATTRIBUTE dist_type {uniform}
+
+@DATA
+10.28,uniform
+11.1,uniform
+13.65,uniform
+15.6,uniform
+18.68,uniform
+20.61,uniform
+23.09,uniform
+23.53,uniform
+26.25,uniform
+27.52,uniform
+29.95,uniform
+32.57,uniform
+33.67,uniform
+36.06,uniform
+39.02,uniform
+40.86,uniform
+42.26,uniform
+45.05,uniform
+47.54,uniform
+47.99,uniform
+51.64,uniform
+53.47,uniform
+54.81,uniform
+56.49,uniform
+60.15,uniform
+60.96,uniform
+62.52,uniform
+64.58,uniform
+68.13,uniform
+69.69,uniform
+72.15,uniform
+74.05,uniform
+75.71,uniform
+78.64,uniform
+79.5,uniform
+81.9,uniform
+84.5,uniform
+86.13,uniform
+88.67,uniform
+90.15,uniform

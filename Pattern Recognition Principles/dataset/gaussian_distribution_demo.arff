@@ -1,0 +1,46 @@
+@RELATION gaussian_distribution_demo
+
+@ATTRIBUTE value NUMERIC
+@ATTRIBUTE dist_type {gaussian}
+
+@DATA
+49.14,gaussian
+47.06,gaussian
+51.14,gaussian
+58.19,gaussian
+56.38,gaussian
+53.5,gaussian
+56.5,gaussian
+54.78,gaussian
+43.73,gaussian
+42.83,gaussian
+45.3,gaussian
+54.99,gaussian
+47.5,gaussian
+73.36,gaussian
+41.81,gaussian
+39.01,gaussian
+57.68,gaussian
+64.22,gaussian
+55.06,gaussian
+58.36,gaussian
+64.26,gaussian
+49.06,gaussian
+35.77,gaussian
+44.68,gaussian
+59.53,gaussian
+35.56,gaussian
+50.34,gaussian
+52.53,gaussian
+46.84,gaussian
+57.24,gaussian
+55.81,gaussian
+73.21,gaussian
+56.2,gaussian
+43.91,gaussian
+44.38,gaussian
+41.68,gaussian
+59.52,gaussian
+44.33,gaussian
+49.3,gaussian
+57.49,gaussian

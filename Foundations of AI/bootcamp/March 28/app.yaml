@@ -1,0 +1,5 @@
+name: chatBotProject
+app_id: da_K1EIZtMUxwZW
+owner: sakib0626q2
+package: .
+kind: wasmer.io/App.v0

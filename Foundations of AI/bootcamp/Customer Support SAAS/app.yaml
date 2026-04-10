@@ -1,0 +1,5 @@
+name: FAI-Live-Assignment
+app_id: da_neGIvtaUVL0o
+owner: sakib0626q2
+package: .
+kind: wasmer.io/App.v0

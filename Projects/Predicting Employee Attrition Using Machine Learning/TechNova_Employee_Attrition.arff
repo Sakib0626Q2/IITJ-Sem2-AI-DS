@@ -1,0 +1,519 @@
+@relation TechNova_Employee_Attrition
+
+@attribute EmployeeID numeric
+@attribute Age numeric
+@attribute Gender {Male, Female}
+@attribute Department {IT, Sales, Finance, R&D, HR}
+@attribute JobRole {'System Admin', 'Account Manager', 'Financial Analyst', 'Lab Technician', 'Research Scientist', 'HR Generalist', 'Recruiter', 'Software Engineer', 'Sales Executive', 'Accountant', 'Data Scientist'}
+@attribute MonthlyIncome numeric
+@attribute YearsAtCompany numeric
+@attribute YearsSinceLastPromotion numeric
+@attribute JobSatisfaction numeric
+@attribute WorkLifeBalance numeric
+@attribute EducationLevel numeric
+@attribute TrainingHoursLastYear numeric
+@attribute OverTime {Yes, No}
+@attribute PerformanceRating numeric
+@attribute Attrition {Yes, No}
+
+@data
+1001,50,Male,IT,'System Admin',31288,12,6,2,1,1,10,No,2,No
+1002,36,Male,Sales,'Account Manager',87692,13,0,1,2,3,48,No,3,No
+1003,29,Female,Finance,'Financial Analyst',100436,3,2,2,1,1,20,No,2,Yes
+1004,42,Female,R&D,'Lab Technician',61403,7,0,2,1,3,65,No,3,Yes
+1005,40,Female,Sales,'Account Manager',106170,4,1,3,1,5,62,No,2,No
+1006,44,Female,R&D,'Research Scientist',24168,0,0,2,4,3,27,Yes,3,No
+1007,32,Male,HR,'HR Generalist',64879,3,2,3,2,5,16,Yes,4,No
+1008,32,Male,IT,'System Admin',74871,2,0,4,1,5,5,Yes,5,No
+1009,45,Female,HR,Recruiter,47174,8,8,1,2,3,18,Yes,3,Yes
+1010,57,Female,Sales,'Account Manager',125155,7,3,2,4,2,55,No,3,No
+1011,45,Male,Finance,'Financial Analyst',86853,0,0,1,3,4,27,No,4,Yes
+1012,24,Female,R&D,'Research Scientist',79046,2,1,2,1,1,65,No,3,Yes
+1013,43,Male,IT,'Software Engineer',64678,5,4,1,2,4,37,Yes,1,Yes
+1014,23,Male,R&D,'Research Scientist',41649,0,0,2,2,1,36,Yes,4,No
+1015,45,Male,Sales,'Account Manager',142795,6,0,2,4,1,67,No,1,No
+1016,51,Male,R&D,'Research Scientist',103668,3,0,2,1,5,48,No,4,No
+1017,23,Male,IT,'System Admin',104906,0,0,2,3,1,42,Yes,3,No
+1018,42,Male,Sales,'Sales Executive',111019,16,5,2,2,1,35,No,1,No
+1019,54,Male,R&D,'Research Scientist',93002,1,1,2,1,3,57,No,3,No
+1020,33,Female,Finance,Accountant,43803,11,3,2,3,4,12,No,4,No
+1021,43,Female,Sales,'Sales Executive',45795,4,2,2,2,3,51,No,3,Yes
+1022,46,Female,Sales,'Account Manager',23770,11,5,2,2,1,57,Yes,1,Yes
+1023,48,Female,Finance,'Financial Analyst',26093,20,10,1,3,5,31,Yes,1,No
+1024,49,Male,HR,'HR Generalist',146265,7,6,3,3,3,80,No,3,No
+1025,37,Male,IT,'Data Scientist',115311,5,0,2,4,3,59,No,2,No
+1026,36,Female,HR,'HR Generalist',32569,7,1,3,1,2,57,No,4,No
+1027,24,Male,R&D,'Lab Technician',26190,1,1,2,1,1,55,No,4,No
+1028,58,Female,Finance,Accountant,77824,2,0,2,4,5,27,Yes,3,No
+1029,28,Male,HR,'HR Generalist',57070,5,0,1,2,3,0,No,2,Yes
+1030,42,Female,Sales,'Account Manager',55197,11,3,4,3,3,41,Yes,1,No
+1031,30,Male,R&D,'Lab Technician',17261,2,0,4,3,5,47,No,5,No
+1032,39,Female,R&D,'Lab Technician',101795,5,1,1,3,1,39,No,5,No
+1033,25,Male,HR,Recruiter,43933,1,1,3,2,2,62,No,3,No
+1034,46,Female,HR,Recruiter,55583,11,2,4,3,3,75,No,2,No
+1035,35,Male,Finance,Accountant,127082,1,0,1,3,2,71,No,2,No
+1036,30,Female,IT,'Data Scientist',100371,5,2,1,4,4,79,No,4,No
+1037,47,Female,HR,'HR Generalist',126032,16,0,4,2,1,3,No,1,No
+1038,23,Male,HR,'HR Generalist',57604,0,0,3,1,4,37,Yes,2,No
+1039,41,Female,Sales,'Account Manager',110074,1,1,1,4,4,26,Yes,5,No
+1040,49,Female,R&D,'Research Scientist',88869,19,5,2,4,4,8,Yes,1,Yes
+1041,28,Male,IT,'Data Scientist',20410,5,4,3,1,1,15,Yes,1,Yes
+1042,29,Female,Sales,'Sales Executive',98375,3,1,3,4,1,55,No,3,No
+1043,56,Female,Finance,Accountant,111055,3,0,4,2,5,75,No,2,No
+1044,35,Female,Finance,Accountant,101716,4,2,4,3,2,30,No,3,No
+1045,38,Male,HR,Recruiter,69245,12,2,2,2,2,13,Yes,2,Yes
+1046,57,Male,HR,Recruiter,58056,14,4,1,1,5,24,No,4,No
+1047,25,Female,Finance,'Financial Analyst',73557,0,0,4,1,5,33,No,3,No
+1048,23,Female,HR,Recruiter,32543,0,0,4,4,4,66,No,3,No
+1049,27,Male,IT,'Data Scientist',111038,1,0,3,2,5,23,No,5,No
+1050,25,Female,HR,'HR Generalist',18828,1,1,4,2,3,72,No,3,No
+1051,50,Male,R&D,'Lab Technician',131656,15,2,4,1,2,25,Yes,2,No
+1052,39,Male,HR,'HR Generalist',32087,11,9,4,2,5,19,Yes,5,Yes
+1053,47,Male,Sales,'Sales Executive',46337,16,2,4,1,3,63,No,3,No
+1054,55,Male,IT,'Data Scientist',80333,15,4,3,2,3,9,No,3,No
+1055,31,Female,Sales,'Account Manager',85448,7,4,2,2,3,66,No,4,No
+1056,57,Male,Sales,'Sales Executive',19648,19,4,2,2,3,23,Yes,3,No
+1057,35,Female,R&D,'Lab Technician',145576,2,0,1,1,4,4,No,1,No
+1058,52,Female,IT,'System Admin',48623,15,4,4,4,3,66,No,5,No
+1059,36,Female,IT,'Software Engineer',50634,13,9,3,2,4,57,No,1,No
+1060,29,Male,IT,'Data Scientist',129598,4,4,1,1,4,26,Yes,5,Yes
+1061,35,Male,IT,'Software Engineer',64334,6,3,1,1,3,79,Yes,4,Yes
+1062,44,Female,IT,'System Admin',83648,18,5,2,2,2,14,No,3,Yes
+1063,42,Female,R&D,'Research Scientist',37054,7,1,3,2,3,34,No,3,No
+1064,37,Male,HR,'HR Generalist',85028,5,3,3,4,3,75,Yes,3,Yes
+1065,39,Female,Sales,'Account Manager',37207,4,1,3,1,3,52,Yes,5,No
+1066,45,Female,IT,'Data Scientist',96554,19,2,2,1,2,43,No,3,No
+1067,47,Female,HR,'HR Generalist',98276,7,0,2,3,1,25,No,1,No
+1068,46,Female,HR,Recruiter,67781,11,7,2,1,1,46,No,3,Yes
+1069,50,Female,Sales,'Account Manager',76035,0,0,2,4,4,33,No,4,No
+1070,36,Male,R&D,'Lab Technician',23210,8,8,2,3,4,49,No,1,No
+1071,22,Female,Finance,Accountant,59363,0,0,4,3,2,11,Yes,3,No
+1072,46,Female,Finance,Accountant,93279,20,3,4,3,5,3,No,3,No
+1073,28,Male,HR,'HR Generalist',149393,3,1,3,2,1,47,No,2,No
+1074,30,Male,Sales,'Sales Executive',96348,5,0,1,2,4,54,No,5,Yes
+1075,45,Male,Finance,'Financial Analyst',128816,17,5,3,1,1,0,No,1,Yes
+1076,22,Female,HR,Recruiter,138053,0,0,1,3,2,65,Yes,2,Yes
+1077,29,Female,R&D,'Research Scientist',81262,7,5,2,4,2,29,Yes,4,No
+1078,45,Male,Finance,'Financial Analyst',149832,6,3,1,2,5,2,No,5,Yes
+1079,32,Female,HR,Recruiter,82411,0,0,3,4,5,20,Yes,1,Yes
+1080,38,Male,HR,Recruiter,38377,15,8,3,4,2,48,Yes,3,No
+1081,29,Female,IT,'Software Engineer',53211,3,2,1,2,4,61,No,1,No
+1082,56,Female,R&D,'Research Scientist',18744,5,3,4,2,1,37,No,3,Yes
+1083,56,Female,IT,'Data Scientist',39995,19,7,2,2,3,14,No,5,No
+1084,54,Male,Sales,'Account Manager',49542,1,0,2,2,5,51,No,3,Yes
+1085,26,Male,IT,'System Admin',25651,4,3,3,3,3,78,No,4,Yes
+1086,49,Male,IT,'Software Engineer',114239,13,4,4,3,4,45,No,3,No
+1087,28,Male,Finance,Accountant,93931,3,1,1,3,5,24,No,4,No
+1088,30,Female,HR,Recruiter,117112,0,0,2,3,3,20,No,5,Yes
+1089,29,Female,R&D,'Research Scientist',31715,6,3,4,1,4,4,No,5,Yes
+1090,33,Female,IT,'Data Scientist',76350,1,1,2,3,1,69,No,1,No
+1091,55,Female,R&D,'Research Scientist',86425,12,5,4,2,4,46,No,4,No
+1092,54,Female,IT,'System Admin',101120,1,1,4,4,5,67,No,4,No
+1093,44,Female,Sales,'Sales Executive',129889,8,6,3,3,2,17,No,2,No
+1094,45,Female,IT,'Software Engineer',89637,20,2,2,1,1,20,Yes,2,Yes
+1095,58,Female,Finance,Accountant,85194,1,0,1,2,3,22,No,2,Yes
+1096,56,Male,HR,Recruiter,91917,8,7,3,4,5,63,Yes,3,No
+1097,43,Male,Sales,'Sales Executive',79200,0,0,3,4,2,66,No,2,No
+1098,48,Male,IT,'Software Engineer',120848,10,9,1,3,4,39,No,4,No
+1099,56,Female,R&D,'Research Scientist',121022,2,1,3,4,2,9,No,3,No
+1100,22,Female,Sales,'Sales Executive',75058,0,0,4,3,5,51,No,5,No
+1101,56,Male,Sales,'Sales Executive',77068,19,9,4,3,5,71,No,1,No
+1102,58,Female,IT,'Software Engineer',114932,3,0,2,2,2,74,No,2,Yes
+1103,35,Female,Sales,'Sales Executive',37785,1,0,2,2,4,60,No,5,No
+1104,24,Male,R&D,'Research Scientist',109475,2,1,1,1,2,63,No,4,No
+1105,22,Male,Sales,'Sales Executive',17282,0,0,2,2,5,4,Yes,1,No
+1106,26,Female,R&D,'Research Scientist',82534,2,0,4,2,5,52,Yes,5,No
+1107,47,Male,IT,'Data Scientist',89964,10,3,1,3,3,54,Yes,1,No
+1108,35,Female,HR,'HR Generalist',134006,5,2,1,2,3,36,No,2,No
+1109,48,Male,Sales,'Account Manager',65583,4,3,2,3,1,55,No,4,Yes
+1110,30,Female,HR,Recruiter,53392,3,1,4,3,5,58,No,1,No
+1111,36,Female,R&D,'Lab Technician',22461,9,9,1,2,3,68,Yes,5,Yes
+1112,36,Female,Sales,'Account Manager',115123,11,10,4,1,2,72,Yes,2,No
+1113,47,Female,Finance,'Financial Analyst',25516,14,8,4,1,4,58,No,2,No
+1114,34,Male,HR,Recruiter,136251,0,0,4,4,2,1,Yes,5,No
+1115,53,Male,Sales,'Account Manager',77493,9,4,2,4,4,64,No,5,No
+1116,53,Male,HR,Recruiter,51027,5,3,3,2,3,59,No,1,No
+1117,25,Female,Sales,'Sales Executive',108547,1,1,3,1,1,50,No,3,Yes
+1118,51,Female,IT,'Software Engineer',115127,12,0,1,3,2,29,Yes,2,No
+1119,58,Female,HR,'HR Generalist',94003,2,2,4,4,2,10,Yes,1,No
+1120,44,Male,Finance,Accountant,54758,9,6,2,3,2,75,Yes,5,Yes
+1121,36,Male,Finance,Accountant,69312,13,5,4,4,4,38,No,1,No
+1122,50,Male,R&D,'Research Scientist',83670,13,1,4,2,3,76,No,5,No
+1123,57,Male,Sales,'Account Manager',97279,5,2,2,1,2,71,Yes,4,Yes
+1124,34,Female,HR,'HR Generalist',30434,2,2,3,4,2,62,No,5,No
+1125,53,Male,R&D,'Research Scientist',90769,15,6,4,1,1,63,No,5,No
+1126,28,Male,HR,Recruiter,81677,6,4,4,3,1,60,Yes,5,No
+1127,43,Female,Sales,'Account Manager',98555,19,9,3,2,3,53,No,3,Yes
+1128,49,Male,Finance,Accountant,143379,13,9,2,1,3,72,No,5,Yes
+1129,23,Male,IT,'Software Engineer',116665,0,0,1,2,5,57,Yes,2,No
+1130,27,Female,Finance,'Financial Analyst',83803,4,3,3,1,1,55,No,2,No
+1131,49,Male,R&D,'Research Scientist',106703,2,1,1,3,5,33,No,1,No
+1132,49,Female,IT,'System Admin',36312,1,0,1,3,4,30,No,3,Yes
+1133,41,Female,R&D,'Research Scientist',132961,1,0,3,2,5,51,No,1,No
+1134,51,Female,Sales,'Account Manager',55379,2,1,4,3,2,75,No,2,No
+1135,32,Male,IT,'Software Engineer',32297,1,0,1,4,5,0,No,2,No
+1136,49,Female,R&D,'Research Scientist',17011,13,1,1,1,3,54,No,4,Yes
+1137,46,Male,Sales,'Sales Executive',135234,19,4,2,3,4,21,No,5,No
+1138,54,Male,Finance,Accountant,59014,17,2,4,4,2,39,No,2,No
+1139,22,Male,Sales,'Account Manager',109333,0,0,1,2,5,0,Yes,1,Yes
+1140,48,Female,HR,Recruiter,26120,9,6,2,4,4,64,No,1,No
+1141,34,Male,Sales,'Account Manager',37852,8,4,4,2,4,62,No,5,No
+1142,24,Male,Sales,'Sales Executive',94239,1,1,3,2,2,53,No,5,No
+1143,27,Female,HR,'HR Generalist',147001,0,0,3,1,5,41,No,4,No
+1144,29,Male,R&D,'Lab Technician',106575,4,0,2,1,4,20,Yes,3,Yes
+1145,48,Male,R&D,'Lab Technician',110040,0,0,3,4,4,78,No,1,No
+1146,30,Male,Sales,'Sales Executive',20744,3,2,1,1,1,80,Yes,5,Yes
+1147,58,Male,HR,'HR Generalist',57359,13,2,4,1,4,21,No,1,No
+1148,54,Male,HR,Recruiter,113746,0,0,1,1,1,37,No,5,No
+1149,45,Male,Finance,Accountant,135906,13,8,1,4,5,79,No,2,No
+1150,36,Female,R&D,'Lab Technician',22597,5,4,3,3,5,7,No,1,No
+1151,53,Male,IT,'Data Scientist',62093,13,8,1,1,5,61,No,2,Yes
+1152,53,Male,R&D,'Research Scientist',129650,19,8,3,1,3,46,No,1,No
+1153,45,Female,R&D,'Research Scientist',135956,2,0,4,4,5,16,No,3,No
+1154,33,Male,Finance,'Financial Analyst',130598,2,1,4,3,4,16,No,4,No
+1155,23,Female,IT,'Data Scientist',148241,0,0,1,1,2,12,No,2,No
+1156,24,Male,Finance,'Financial Analyst',23036,1,0,2,2,1,16,Yes,5,Yes
+1157,58,Male,IT,'Software Engineer',46778,12,3,3,4,3,37,Yes,3,Yes
+1158,38,Male,Sales,'Sales Executive',33800,1,0,3,1,5,80,No,1,No
+1159,23,Male,IT,'System Admin',40372,1,1,1,1,5,77,No,2,Yes
+1160,23,Male,Finance,Accountant,76516,0,0,3,2,2,44,No,1,No
+1161,49,Male,R&D,'Research Scientist',35538,1,0,3,2,2,5,Yes,1,Yes
+1162,44,Male,IT,'Software Engineer',78918,3,2,2,4,3,34,No,1,Yes
+1163,58,Male,IT,'System Admin',86155,14,5,2,4,1,13,No,4,Yes
+1164,53,Male,HR,'HR Generalist',74500,3,2,1,2,5,71,Yes,4,No
+1165,54,Male,R&D,'Research Scientist',125659,12,0,2,4,3,60,No,5,No
+1166,22,Male,Sales,'Sales Executive',42716,0,0,1,2,4,14,No,2,No
+1167,40,Male,Finance,'Financial Analyst',149308,11,0,4,1,4,53,No,3,Yes
+1168,23,Female,Sales,'Account Manager',17352,1,1,1,2,3,26,No,3,Yes
+1169,47,Male,R&D,'Lab Technician',148004,12,1,4,2,5,12,No,3,No
+1170,53,Female,IT,'Data Scientist',91449,13,9,1,3,3,30,Yes,1,No
+1171,27,Female,IT,'Software Engineer',23556,3,2,3,2,5,34,No,4,No
+1172,53,Male,R&D,'Lab Technician',101836,17,8,2,2,2,59,No,2,Yes
+1173,25,Female,IT,'System Admin',65098,0,0,4,3,3,5,No,1,No
+1174,32,Female,IT,'System Admin',127169,5,5,1,4,5,68,No,4,No
+1175,38,Male,IT,'Data Scientist',141060,10,0,2,3,3,57,No,4,No
+1176,45,Male,Finance,Accountant,145544,1,0,1,1,3,48,No,2,No
+1177,26,Female,Finance,'Financial Analyst',15340,3,1,2,3,5,22,Yes,2,Yes
+1178,55,Female,HR,Recruiter,97302,18,5,2,1,5,33,No,2,No
+1179,27,Male,Sales,'Sales Executive',15138,2,1,1,4,1,25,No,1,No
+1180,43,Male,R&D,'Research Scientist',146430,4,1,4,3,3,46,No,5,No
+1181,32,Male,R&D,'Research Scientist',134619,2,0,4,3,4,4,No,2,No
+1182,37,Male,R&D,'Research Scientist',100376,1,1,3,4,3,19,Yes,5,No
+1183,54,Female,HR,Recruiter,114931,9,4,2,1,3,5,No,1,No
+1184,30,Male,Finance,'Financial Analyst',96532,8,4,3,3,5,69,No,5,No
+1185,27,Male,HR,'HR Generalist',70778,1,1,3,1,3,58,No,3,No
+1186,37,Female,R&D,'Lab Technician',52772,13,5,1,3,3,63,No,5,No
+1187,50,Male,Sales,'Sales Executive',73478,10,8,1,2,4,17,No,2,No
+1188,24,Male,IT,'Data Scientist',41762,1,1,1,3,5,3,Yes,1,No
+1189,41,Female,Finance,Accountant,70568,14,9,2,4,3,16,No,2,Yes
+1190,57,Female,Finance,'Financial Analyst',100090,8,1,1,4,2,13,Yes,3,No
+1191,40,Male,HR,Recruiter,35219,18,2,1,1,1,77,No,2,No
+1192,47,Male,Finance,Accountant,72169,8,6,2,3,4,12,Yes,2,Yes
+1193,24,Male,R&D,'Research Scientist',89965,2,1,2,1,3,6,Yes,2,Yes
+1194,40,Male,R&D,'Lab Technician',99754,8,7,4,1,2,43,No,4,No
+1195,41,Male,HR,Recruiter,92988,13,7,1,2,3,14,No,3,Yes
+1196,53,Male,R&D,'Lab Technician',147379,18,5,1,2,3,18,No,2,No
+1197,28,Male,Sales,'Account Manager',95388,6,3,1,4,5,62,No,2,No
+1198,54,Male,HR,Recruiter,105768,15,10,4,1,5,34,No,2,No
+1199,39,Male,Sales,'Sales Executive',50428,15,9,1,4,5,80,No,1,No
+1200,22,Male,IT,'Data Scientist',107021,0,0,4,3,2,34,No,4,No
+1201,32,Male,Sales,'Sales Executive',133418,0,0,3,1,3,18,Yes,1,No
+1202,49,Male,IT,'Software Engineer',147212,3,2,4,1,1,19,No,4,No
+1203,46,Male,IT,'System Admin',41421,3,3,3,3,4,34,No,2,No
+1204,44,Female,Sales,'Account Manager',16708,6,2,1,3,5,31,No,3,Yes
+1205,52,Female,HR,'HR Generalist',149702,7,6,3,4,5,47,Yes,5,No
+1206,51,Female,R&D,'Lab Technician',91021,16,0,4,4,3,43,Yes,5,No
+1207,56,Female,R&D,'Lab Technician',59789,4,4,2,3,3,23,Yes,2,Yes
+1208,28,Male,IT,'Software Engineer',41086,6,3,3,4,2,60,No,1,No
+1209,37,Male,IT,'System Admin',31859,11,9,3,3,2,16,No,3,No
+1210,47,Male,HR,Recruiter,22684,19,3,1,1,5,70,Yes,4,Yes
+1211,23,Female,Finance,'Financial Analyst',106088,0,0,4,1,3,49,No,2,No
+1212,22,Female,Sales,'Account Manager',147279,0,0,3,2,1,64,No,3,No
+1213,33,Male,IT,'Software Engineer',61099,3,1,3,1,4,31,No,3,Yes
+1214,26,Male,R&D,'Research Scientist',81093,3,3,3,3,3,35,No,4,Yes
+1215,58,Male,HR,'HR Generalist',63651,5,5,3,4,3,12,Yes,3,Yes
+1216,53,Male,Sales,'Account Manager',28893,6,6,2,2,2,69,No,1,Yes
+1217,30,Female,HR,'HR Generalist',81418,1,1,4,4,4,57,No,1,No
+1218,56,Female,Sales,'Account Manager',140074,4,4,1,3,5,13,No,1,No
+1219,40,Male,Sales,'Account Manager',118065,2,2,1,1,3,36,No,3,No
+1220,37,Female,IT,'Data Scientist',145351,6,5,2,2,5,78,Yes,1,Yes
+1221,24,Female,HR,Recruiter,53635,2,1,4,3,3,67,No,4,No
+1222,41,Male,HR,'HR Generalist',110071,13,10,3,2,5,39,Yes,3,No
+1223,45,Male,R&D,'Lab Technician',93518,6,4,2,2,4,58,No,5,Yes
+1224,54,Male,R&D,'Lab Technician',121233,4,0,4,1,2,79,No,3,No
+1225,45,Male,IT,'System Admin',118651,4,1,3,3,4,15,Yes,4,No
+1226,32,Male,IT,'Software Engineer',87805,6,3,2,4,1,61,No,5,No
+1227,29,Male,Finance,Accountant,137813,1,1,4,2,2,3,Yes,3,No
+1228,57,Male,R&D,'Research Scientist',94063,20,0,1,2,4,44,No,1,Yes
+1229,41,Male,Sales,'Account Manager',17454,5,1,1,4,1,27,No,2,No
+1230,56,Female,HR,'HR Generalist',35878,14,8,4,3,3,65,No,2,Yes
+1231,46,Male,IT,'Data Scientist',83344,20,7,1,2,3,30,No,1,No
+1232,56,Male,HR,Recruiter,119946,9,2,4,2,5,2,No,2,No
+1233,46,Male,HR,'HR Generalist',51593,6,3,3,2,2,7,No,2,Yes
+1234,50,Female,Finance,'Financial Analyst',51304,4,0,4,3,3,23,No,1,No
+1235,39,Male,R&D,'Research Scientist',128613,0,0,3,3,2,14,No,1,No
+1236,39,Male,IT,'System Admin',33354,12,9,2,4,3,42,Yes,3,Yes
+1237,23,Female,HR,Recruiter,37190,0,0,4,3,5,30,No,3,No
+1238,56,Female,IT,'Data Scientist',21142,17,3,2,3,4,72,Yes,1,No
+1239,37,Female,Sales,'Sales Executive',56862,12,2,1,1,5,44,No,4,No
+1240,57,Male,Finance,Accountant,140438,20,5,3,4,1,65,Yes,2,No
+1241,54,Male,Sales,'Sales Executive',63456,20,6,4,2,3,7,Yes,3,No
+1242,25,Female,IT,'Software Engineer',115167,1,1,2,3,1,70,No,2,No
+1243,54,Female,IT,'Data Scientist',97035,4,0,3,2,1,56,No,5,No
+1244,35,Female,R&D,'Lab Technician',23016,12,10,3,2,2,79,No,1,No
+1245,42,Female,HR,Recruiter,17384,3,1,1,1,3,29,Yes,4,Yes
+1246,41,Male,HR,Recruiter,117239,16,10,1,3,1,73,No,5,No
+1247,29,Female,Sales,'Account Manager',126431,2,2,3,4,4,17,No,5,No
+1248,28,Male,Finance,Accountant,95018,0,0,3,3,1,68,No,5,Yes
+1249,24,Male,HR,Recruiter,55510,2,0,4,2,4,38,Yes,1,No
+1250,38,Male,R&D,'Research Scientist',36826,3,2,3,4,2,59,No,3,No
+1251,54,Male,Sales,'Sales Executive',83026,1,0,4,3,1,42,Yes,1,Yes
+1252,33,Male,Sales,'Sales Executive',136668,3,3,3,2,5,44,No,3,No
+1253,43,Male,R&D,'Research Scientist',39045,15,9,1,2,2,22,No,5,Yes
+1254,43,Female,Finance,'Financial Analyst',105102,17,7,4,1,4,68,No,5,No
+1255,51,Male,R&D,'Lab Technician',66919,7,7,2,1,2,5,No,4,Yes
+1256,29,Female,Finance,'Financial Analyst',114441,2,0,1,1,1,55,No,3,No
+1257,48,Male,R&D,'Research Scientist',133325,8,3,4,2,3,3,No,5,No
+1258,48,Male,R&D,'Research Scientist',34337,19,4,4,3,3,22,No,2,No
+1259,55,Male,IT,'Software Engineer',92949,5,4,2,1,4,5,No,4,No
+1260,42,Male,Sales,'Sales Executive',15276,9,7,4,3,4,31,No,1,No
+1261,51,Male,R&D,'Research Scientist',66151,20,6,3,1,3,17,No,4,Yes
+1262,54,Male,R&D,'Research Scientist',67887,9,8,2,4,4,14,No,2,No
+1263,49,Male,HR,Recruiter,96442,12,7,1,4,2,39,No,3,No
+1264,54,Female,Sales,'Account Manager',64847,16,1,1,1,5,72,No,1,Yes
+1265,26,Male,HR,'HR Generalist',73653,0,0,3,2,5,73,No,1,Yes
+1266,40,Female,Sales,'Account Manager',71622,16,9,1,1,2,5,Yes,3,Yes
+1267,25,Male,HR,Recruiter,42810,3,3,4,1,5,62,No,4,No
+1268,56,Female,R&D,'Lab Technician',92842,8,3,4,2,1,66,No,5,No
+1269,38,Female,R&D,'Lab Technician',137225,8,5,3,4,2,10,Yes,4,No
+1270,49,Female,IT,'System Admin',25503,0,0,1,3,4,42,Yes,2,Yes
+1271,51,Male,HR,Recruiter,99761,1,1,1,1,2,16,No,5,Yes
+1272,50,Male,Finance,Accountant,141439,15,1,3,2,3,3,No,4,No
+1273,27,Male,IT,'Data Scientist',26590,4,2,2,1,4,62,No,3,No
+1274,56,Female,HR,'HR Generalist',81624,0,0,1,2,3,67,Yes,2,Yes
+1275,58,Female,HR,'HR Generalist',135356,9,2,2,3,4,80,No,2,No
+1276,45,Female,IT,'System Admin',57727,17,10,1,3,5,40,Yes,2,Yes
+1277,50,Male,R&D,'Research Scientist',93471,7,1,1,4,2,4,No,5,Yes
+1278,52,Female,HR,'HR Generalist',23068,20,10,1,2,1,31,Yes,1,No
+1279,56,Female,R&D,'Research Scientist',131923,10,7,1,2,4,69,Yes,5,Yes
+1280,54,Male,IT,'Software Engineer',26390,1,1,4,4,4,34,Yes,4,No
+1281,42,Male,R&D,'Lab Technician',121752,7,0,2,4,3,21,No,1,No
+1282,53,Female,Sales,'Account Manager',109754,7,3,2,2,5,64,Yes,4,Yes
+1283,44,Female,Finance,Accountant,90969,16,0,1,4,3,21,No,1,Yes
+1284,54,Female,HR,'HR Generalist',92064,14,6,1,3,3,10,No,5,No
+1285,24,Male,Finance,'Financial Analyst',36281,0,0,2,1,5,76,No,2,Yes
+1286,39,Female,R&D,'Research Scientist',69189,12,7,4,3,1,2,No,3,No
+1287,46,Male,HR,'HR Generalist',63511,18,4,3,4,3,8,No,2,Yes
+1288,52,Male,R&D,'Research Scientist',137115,4,3,3,2,3,59,Yes,5,Yes
+1289,24,Male,Sales,'Account Manager',23605,0,0,2,2,4,75,No,1,No
+1290,45,Female,IT,'Data Scientist',115318,4,2,1,3,5,13,Yes,2,Yes
+1291,53,Female,HR,'HR Generalist',147453,7,4,1,2,2,17,Yes,5,Yes
+1292,43,Male,Sales,'Sales Executive',34810,12,3,4,4,1,72,No,4,No
+1293,44,Male,Sales,'Sales Executive',56869,7,5,3,3,1,22,No,3,No
+1294,23,Female,HR,'HR Generalist',47955,0,0,4,2,5,73,No,2,Yes
+1295,48,Male,R&D,'Lab Technician',76388,10,5,3,1,4,46,No,1,No
+1296,23,Female,Sales,'Sales Executive',25207,0,0,2,1,4,68,No,4,Yes
+1297,47,Male,Finance,'Financial Analyst',37031,12,5,3,4,5,46,Yes,5,No
+1298,38,Male,Sales,'Sales Executive',95807,2,2,4,2,4,29,Yes,3,No
+1299,54,Male,R&D,'Research Scientist',86312,16,8,4,4,1,24,Yes,1,No
+1300,30,Male,R&D,'Lab Technician',74766,4,3,4,3,1,27,Yes,5,No
+1301,50,Female,Finance,'Financial Analyst',104833,19,10,2,1,2,24,No,5,No
+1302,47,Male,Sales,'Sales Executive',126041,20,6,3,3,5,73,No,2,No
+1303,56,Male,R&D,'Lab Technician',131185,7,7,3,2,3,77,Yes,2,No
+1304,46,Female,HR,Recruiter,25350,13,0,4,4,3,57,No,1,No
+1305,45,Male,IT,'Data Scientist',115859,3,2,3,4,2,40,No,5,No
+1306,34,Male,IT,'System Admin',83487,10,6,1,4,2,24,Yes,2,Yes
+1307,28,Female,IT,'System Admin',138853,3,0,1,3,4,77,Yes,3,No
+1308,57,Female,Sales,'Account Manager',68117,14,4,1,1,2,47,Yes,3,No
+1309,41,Male,Finance,Accountant,116084,18,1,3,3,2,9,Yes,5,No
+1310,22,Female,R&D,'Lab Technician',38782,0,0,2,3,3,74,Yes,2,Yes
+1311,29,Female,HR,Recruiter,43454,6,3,2,2,4,10,No,1,Yes
+1312,37,Male,HR,Recruiter,82904,2,1,2,2,2,20,Yes,1,No
+1313,35,Male,Sales,'Account Manager',144936,11,9,2,2,2,44,No,1,Yes
+1314,33,Female,IT,'Software Engineer',137258,2,2,1,1,4,6,No,3,No
+1315,44,Female,Sales,'Sales Executive',126668,10,10,1,1,5,80,No,2,Yes
+1316,36,Male,Finance,'Financial Analyst',139184,9,6,4,2,4,63,No,2,No
+1317,49,Female,Finance,Accountant,31566,4,2,3,2,3,63,Yes,3,Yes
+1318,55,Female,R&D,'Lab Technician',53333,4,4,3,1,5,1,No,1,No
+1319,23,Male,R&D,'Lab Technician',136929,1,0,2,4,1,75,No,1,Yes
+1320,53,Male,Finance,Accountant,104571,7,2,1,1,4,41,Yes,5,Yes
+1321,44,Male,Finance,Accountant,135263,9,0,2,1,3,53,Yes,4,Yes
+1322,43,Female,Finance,Accountant,147661,5,3,4,1,5,74,No,2,No
+1323,46,Male,Sales,'Sales Executive',40235,14,8,3,2,4,15,No,2,No
+1324,43,Female,Finance,'Financial Analyst',15159,15,3,3,4,2,17,No,2,No
+1325,43,Female,HR,Recruiter,119859,16,1,2,1,4,58,No,4,Yes
+1326,27,Female,IT,'Software Engineer',122507,0,0,4,2,1,15,No,5,No
+1327,36,Male,Finance,Accountant,29743,8,4,3,3,4,5,Yes,4,Yes
+1328,58,Female,IT,'Software Engineer',61101,1,0,4,3,5,56,No,1,No
+1329,54,Male,Sales,'Account Manager',136534,14,8,4,1,5,46,Yes,1,No
+1330,29,Female,IT,'Software Engineer',99227,1,1,2,3,4,47,Yes,2,No
+1331,26,Male,Sales,'Sales Executive',86126,2,1,1,4,5,41,No,3,No
+1332,25,Male,HR,Recruiter,71071,0,0,2,3,2,75,No,2,No
+1333,27,Female,Sales,'Account Manager',89763,3,1,1,3,4,59,No,3,No
+1334,53,Male,Sales,'Sales Executive',61154,3,1,4,4,2,76,No,4,Yes
+1335,51,Male,R&D,'Research Scientist',22016,13,2,1,1,2,3,No,1,No
+1336,56,Female,Finance,Accountant,104678,8,8,4,1,3,1,Yes,3,No
+1337,37,Female,Finance,'Financial Analyst',127056,8,1,3,4,4,58,Yes,4,Yes
+1338,34,Female,HR,Recruiter,69238,8,8,3,4,5,26,Yes,1,Yes
+1339,51,Female,HR,Recruiter,73608,17,4,3,4,2,26,No,3,No
+1340,40,Male,Finance,Accountant,104081,9,7,2,3,3,78,No,2,No
+1341,38,Male,R&D,'Lab Technician',65961,3,1,2,4,4,71,No,2,Yes
+1342,40,Male,Finance,'Financial Analyst',41917,11,5,4,2,4,6,No,2,No
+1343,49,Male,R&D,'Research Scientist',42990,7,2,3,3,1,62,No,4,No
+1344,47,Female,HR,'HR Generalist',77551,1,1,2,1,1,45,Yes,2,Yes
+1345,58,Female,IT,'Software Engineer',95811,12,9,3,1,2,62,Yes,5,No
+1346,47,Male,HR,'HR Generalist',70103,20,4,2,1,1,11,No,1,No
+1347,44,Male,HR,'HR Generalist',121122,15,7,1,3,2,12,No,4,Yes
+1348,30,Female,Sales,'Sales Executive',34008,1,1,1,2,5,42,No,2,No
+1349,33,Male,Sales,'Account Manager',47402,10,0,3,4,2,16,Yes,1,No
+1350,22,Female,Sales,'Sales Executive',128550,0,0,4,4,1,62,No,3,No
+1351,22,Male,Sales,'Sales Executive',106218,0,0,2,1,5,80,No,2,Yes
+1352,55,Female,R&D,'Lab Technician',148296,9,4,2,1,1,35,Yes,1,No
+1353,53,Male,Finance,'Financial Analyst',135779,14,2,1,3,2,7,No,5,No
+1354,46,Female,IT,'Software Engineer',144714,16,3,1,2,3,68,No,3,No
+1355,22,Female,HR,Recruiter,47441,0,0,4,4,4,79,No,5,No
+1356,37,Female,R&D,'Research Scientist',77368,7,1,4,3,1,35,Yes,1,No
+1357,26,Female,IT,'System Admin',107122,1,0,4,4,2,27,No,5,No
+1358,43,Female,R&D,'Research Scientist',59760,8,2,3,1,5,46,No,1,No
+1359,50,Female,R&D,'Lab Technician',38478,7,6,1,4,1,75,No,1,No
+1360,24,Male,HR,'HR Generalist',142881,2,1,3,2,1,29,No,5,No
+1361,33,Female,Finance,'Financial Analyst',86854,11,9,1,2,4,22,No,1,No
+1362,47,Female,Sales,'Account Manager',109230,17,10,1,1,2,15,No,2,Yes
+1363,37,Male,Finance,'Financial Analyst',100716,5,0,2,2,3,13,No,1,No
+1364,58,Female,HR,Recruiter,113538,19,6,1,2,5,73,No,4,Yes
+1365,43,Female,HR,Recruiter,30372,19,5,1,3,2,70,Yes,1,Yes
+1366,50,Female,HR,'HR Generalist',44796,20,0,3,4,5,51,No,4,No
+1367,35,Male,IT,'Software Engineer',113826,11,4,1,1,1,36,Yes,1,Yes
+1368,49,Male,Finance,Accountant,135592,18,10,3,1,4,28,No,1,No
+1369,26,Female,Finance,Accountant,108635,0,0,4,1,4,66,No,5,No
+1370,51,Female,R&D,'Research Scientist',126022,20,10,1,1,3,14,No,2,No
+1371,26,Male,R&D,'Research Scientist',69040,2,2,1,1,4,46,No,2,No
+1372,33,Female,R&D,'Research Scientist',90357,9,0,3,2,1,45,No,3,No
+1373,37,Female,HR,Recruiter,93356,15,3,4,3,3,51,Yes,5,No
+1374,47,Male,Finance,'Financial Analyst',31211,6,4,2,1,2,18,No,5,Yes
+1375,47,Female,HR,Recruiter,120426,16,1,4,3,4,76,No,2,No
+1376,42,Male,IT,'Data Scientist',20842,11,1,3,3,3,20,Yes,5,No
+1377,57,Male,R&D,'Lab Technician',81852,8,2,4,2,1,63,Yes,2,Yes
+1378,54,Male,HR,Recruiter,140737,14,7,3,1,5,36,No,5,Yes
+1379,51,Female,HR,Recruiter,60968,17,7,3,2,5,26,No,1,No
+1380,58,Male,IT,'Data Scientist',32508,20,6,2,1,1,54,No,2,Yes
+1381,44,Male,Sales,'Sales Executive',69575,12,5,1,2,1,28,No,2,Yes
+1382,31,Male,Finance,'Financial Analyst',81914,4,0,3,3,5,19,Yes,4,No
+1383,26,Male,Sales,'Account Manager',82055,3,3,3,1,3,24,No,5,No
+1384,57,Female,R&D,'Lab Technician',102697,10,0,2,4,5,69,No,5,No
+1385,55,Male,HR,'HR Generalist',121239,10,7,3,3,1,62,No,2,No
+1386,52,Male,IT,'Data Scientist',138106,12,6,1,4,4,35,No,1,No
+1387,31,Female,IT,'System Admin',20355,1,0,2,3,2,1,No,1,No
+1388,40,Male,Finance,'Financial Analyst',69120,1,1,1,2,4,21,No,1,No
+1389,53,Male,Sales,'Sales Executive',53342,20,2,1,1,4,15,No,5,No
+1390,22,Male,Finance,Accountant,17257,0,0,2,3,1,17,Yes,4,Yes
+1391,26,Male,HR,Recruiter,42364,3,3,3,2,5,68,No,2,Yes
+1392,25,Male,Finance,'Financial Analyst',126715,2,1,1,1,3,53,No,3,No
+1393,37,Male,IT,'Software Engineer',41654,1,0,1,1,4,29,No,4,Yes
+1394,45,Male,IT,'System Admin',96423,14,5,1,3,5,44,Yes,3,No
+1395,37,Female,R&D,'Research Scientist',44320,2,2,1,1,3,18,No,4,Yes
+1396,23,Male,R&D,'Research Scientist',35808,0,0,2,3,4,33,Yes,1,No
+1397,49,Female,HR,Recruiter,67389,11,4,2,1,3,12,No,5,No
+1398,53,Female,Sales,'Sales Executive',133581,12,2,4,4,5,42,No,3,No
+1399,48,Male,Finance,Accountant,142927,10,8,4,2,2,61,No,4,No
+1400,41,Female,HR,'HR Generalist',49773,4,4,1,4,5,21,Yes,5,No
+1401,45,Male,R&D,'Lab Technician',91396,0,0,3,3,1,51,No,3,No
+1402,33,Female,Finance,Accountant,122692,7,4,1,4,3,51,No,2,No
+1403,56,Male,R&D,'Lab Technician',72505,2,1,3,3,2,35,No,4,No
+1404,54,Male,Finance,Accountant,100896,18,3,1,1,3,72,No,2,No
+1405,54,Male,Sales,'Account Manager',33135,6,5,4,1,3,18,No,1,No
+1406,58,Female,HR,Recruiter,105887,11,3,4,3,4,37,No,2,No
+1407,33,Male,Finance,'Financial Analyst',137118,8,0,3,4,1,69,Yes,2,No
+1408,24,Female,IT,'Data Scientist',62377,0,0,1,1,3,78,Yes,4,Yes
+1409,22,Male,IT,'Software Engineer',77491,0,0,3,2,5,56,No,1,Yes
+1410,54,Female,Finance,Accountant,73283,14,6,4,1,5,19,No,2,No
+1411,31,Male,Finance,Accountant,31923,7,0,1,2,4,8,No,5,Yes
+1412,50,Female,Finance,'Financial Analyst',62591,9,2,1,4,1,31,Yes,3,Yes
+1413,34,Male,IT,'Data Scientist',77261,9,1,3,2,1,3,Yes,2,Yes
+1414,33,Male,IT,'System Admin',69336,7,2,2,2,5,49,No,1,Yes
+1415,52,Male,Finance,'Financial Analyst',89083,0,0,3,2,2,4,Yes,2,Yes
+1416,23,Male,R&D,'Research Scientist',75948,1,0,4,2,4,19,No,3,No
+1417,56,Female,R&D,'Research Scientist',41672,4,2,4,1,4,74,Yes,1,No
+1418,44,Male,Sales,'Account Manager',19213,2,2,4,2,5,36,No,4,No
+1419,38,Female,HR,Recruiter,77507,0,0,4,1,5,21,No,1,No
+1420,47,Male,R&D,'Research Scientist',72134,3,2,4,2,2,57,Yes,4,No
+1421,29,Male,IT,'Data Scientist',148172,7,2,2,3,2,67,No,1,No
+1422,50,Male,R&D,'Lab Technician',43172,2,2,1,4,1,43,Yes,3,Yes
+1423,47,Male,Sales,'Sales Executive',35132,9,1,3,2,4,33,No,3,No
+1424,31,Female,Sales,'Account Manager',33199,1,1,3,3,4,76,No,1,No
+1425,47,Male,HR,'HR Generalist',51609,10,5,4,2,5,41,No,2,No
+1426,55,Male,R&D,'Research Scientist',46881,9,3,3,2,1,8,No,3,Yes
+1427,28,Female,IT,'Data Scientist',39472,4,4,4,2,4,6,No,4,No
+1428,25,Female,IT,'Data Scientist',69131,3,3,2,3,1,67,Yes,4,Yes
+1429,32,Male,Finance,'Financial Analyst',27828,6,5,2,4,1,18,Yes,5,Yes
+1430,50,Male,IT,'Software Engineer',111664,1,0,1,3,5,30,No,4,No
+1431,57,Female,HR,Recruiter,147473,8,2,2,4,1,34,No,5,No
+1432,46,Male,HR,Recruiter,30193,15,10,2,2,2,56,No,1,No
+1433,42,Male,IT,'Software Engineer',117518,12,3,1,1,2,60,No,1,Yes
+1434,57,Male,IT,'Data Scientist',34611,8,0,3,2,3,30,No,1,No
+1435,31,Female,Finance,'Financial Analyst',91240,3,0,4,4,5,52,No,2,No
+1436,58,Female,IT,'Software Engineer',17745,3,3,4,3,3,31,No,2,No
+1437,30,Male,Finance,Accountant,70243,5,5,3,2,2,65,No,5,Yes
+1438,45,Male,Finance,Accountant,18866,9,9,1,3,3,58,No,4,No
+1439,56,Male,IT,'System Admin',143681,11,5,3,3,5,9,Yes,4,Yes
+1440,56,Female,Sales,'Account Manager',86354,16,6,2,3,5,1,Yes,1,Yes
+1441,57,Male,Sales,'Account Manager',66374,13,5,1,2,1,65,Yes,3,Yes
+1442,39,Male,Finance,'Financial Analyst',129397,13,8,1,3,4,59,Yes,2,No
+1443,53,Female,IT,'Data Scientist',139577,1,0,1,3,1,16,No,2,No
+1444,45,Male,Sales,'Sales Executive',96029,20,2,4,2,5,15,No,1,No
+1445,44,Female,IT,'Data Scientist',108574,19,2,3,3,2,15,No,2,No
+1446,53,Male,IT,'System Admin',45431,10,9,1,2,2,45,No,1,Yes
+1447,58,Male,IT,'Data Scientist',44336,15,2,1,4,1,38,No,5,Yes
+1448,33,Male,R&D,'Research Scientist',55992,2,0,1,4,5,30,Yes,4,Yes
+1449,34,Female,IT,'System Admin',70350,6,3,3,4,2,0,Yes,3,No
+1450,44,Female,R&D,'Lab Technician',84561,5,3,4,3,5,10,Yes,4,No
+1451,46,Female,Finance,'Financial Analyst',66955,18,6,2,1,2,3,No,4,Yes
+1452,56,Male,Sales,'Sales Executive',76240,4,0,4,1,5,70,Yes,5,No
+1453,51,Female,Sales,'Sales Executive',61607,3,2,1,3,3,25,Yes,2,No
+1454,38,Male,Sales,'Sales Executive',67870,14,6,4,1,5,49,No,3,No
+1455,41,Male,Sales,'Account Manager',79110,3,0,4,2,5,11,No,2,No
+1456,46,Female,Sales,'Account Manager',131895,19,2,2,1,1,80,Yes,4,Yes
+1457,43,Male,Sales,'Sales Executive',19426,9,3,3,3,3,74,No,1,Yes
+1458,34,Male,Sales,'Sales Executive',42606,7,5,3,3,4,64,No,4,No
+1459,40,Male,Finance,'Financial Analyst',43151,2,1,4,2,1,46,No,2,No
+1460,57,Male,IT,'Software Engineer',26308,4,4,4,4,4,52,No,4,No
+1461,33,Male,HR,Recruiter,105306,5,4,3,3,2,70,Yes,1,No
+1462,40,Female,R&D,'Lab Technician',121984,7,3,3,2,4,1,Yes,5,No
+1463,33,Male,HR,'HR Generalist',17204,6,0,2,1,5,23,No,2,No
+1464,30,Female,HR,'HR Generalist',107769,4,0,1,1,4,3,No,4,No
+1465,28,Female,IT,'System Admin',102265,1,1,4,2,1,18,No,2,No
+1466,49,Male,IT,'System Admin',46131,5,0,3,2,1,25,No,5,No
+1467,35,Male,IT,'System Admin',67428,13,7,4,3,4,74,No,4,No
+1468,52,Male,Sales,'Account Manager',48870,3,3,4,1,1,39,No,4,No
+1469,40,Female,Finance,'Financial Analyst',118547,12,8,3,2,1,49,No,2,Yes
+1470,37,Male,Sales,'Account Manager',64067,3,1,2,1,4,42,No,2,Yes
+1471,26,Female,Finance,'Financial Analyst',127217,0,0,4,2,3,74,Yes,1,No
+1472,56,Male,Finance,'Financial Analyst',113934,6,2,2,1,3,66,No,5,No
+1473,33,Female,HR,'HR Generalist',89707,3,0,3,4,2,11,Yes,1,No
+1474,46,Male,HR,Recruiter,76215,13,2,1,3,1,66,Yes,4,Yes
+1475,42,Male,Finance,'Financial Analyst',64429,2,0,1,1,4,26,No,2,No
+1476,57,Female,Finance,Accountant,97152,4,2,4,4,1,53,Yes,4,No
+1477,44,Female,Sales,'Account Manager',123048,15,8,3,1,5,65,Yes,4,Yes
+1478,37,Male,Sales,'Sales Executive',92240,9,3,2,1,1,48,Yes,3,No
+1479,35,Female,HR,'HR Generalist',128688,6,2,4,4,1,15,No,3,No
+1480,52,Male,IT,'Software Engineer',61473,19,3,3,1,3,1,No,4,No
+1481,26,Female,Finance,Accountant,111762,3,3,3,1,4,59,No,2,No
+1482,56,Female,Sales,'Sales Executive',121956,1,1,2,3,1,53,Yes,4,No
+1483,44,Male,HR,Recruiter,133452,17,1,4,4,3,29,No,3,No
+1484,50,Male,Sales,'Account Manager',141311,18,8,3,4,2,37,No,2,No
+1485,32,Male,Finance,'Financial Analyst',22006,2,0,3,2,3,27,No,4,Yes
+1486,39,Male,Finance,'Financial Analyst',89218,16,5,3,1,3,24,No,5,No
+1487,33,Female,R&D,'Research Scientist',47430,2,0,2,3,3,9,Yes,5,No
+1488,30,Male,IT,'Software Engineer',38091,5,4,4,1,1,59,No,4,No
+1489,31,Male,R&D,'Research Scientist',38989,7,5,4,1,1,41,No,2,No
+1490,38,Female,HR,'HR Generalist',90451,12,0,4,2,2,39,No,4,No
+1491,28,Female,Sales,'Account Manager',33990,3,3,4,1,5,76,No,4,No
+1492,34,Male,HR,Recruiter,105270,9,2,1,3,5,41,No,3,No
+1493,30,Male,Finance,Accountant,95360,5,2,1,3,5,46,No,5,No
+1494,48,Male,R&D,'Research Scientist',51081,20,1,4,2,2,36,No,3,No
+1495,23,Male,R&D,'Lab Technician',123272,0,0,2,1,5,79,No,3,No
+1496,26,Female,R&D,'Lab Technician',31241,3,0,1,3,5,21,No,4,Yes
+1497,50,Male,HR,Recruiter,139932,18,4,3,1,3,56,Yes,3,Yes
+1498,58,Female,Finance,Accountant,20939,15,4,1,1,1,26,No,5,No
+1499,40,Male,Sales,'Account Manager',128000,12,3,3,1,1,40,No,3,No
+1500,29,Female,Sales,'Sales Executive',50063,3,0,4,2,3,79,No,5,No

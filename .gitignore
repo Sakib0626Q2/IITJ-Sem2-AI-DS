@@ -74,9 +74,10 @@ ai_env/
 #
 # Note: You already have a dataset/ folder in Pattern
 # Recognition — check its size before your next push.
-*.csv
-*.xlsx
-*.xls
+
+# *.csv
+# *.xlsx
+# *.xls
 *.parquet
 *.h5
 *.hdf5

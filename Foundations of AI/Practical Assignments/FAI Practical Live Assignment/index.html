@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Document Assistant</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f9; display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh; margin: 0; }
+        h1 { color: #333; }
+        p { color: #666; }
+    </style>
+</head>
+<body>
+    <h1>Sakib's AI Document Assistant</h1>
+    <p>Upload your PDF and ask questions below.</p>
+
+    <!-- PASTE YOUR FLOWISE WIDGET SCRIPT BELOW -->
+    
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "bc7ed798-c1e4-47c4-8ceb-b02acedabf7b",
+            apiHost: "https://cloud.flowiseai.com",
+        })
+    </script>
+</body>
+</html>

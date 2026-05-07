@@ -1,0 +1,235 @@
+What is prompt
+-----------------
+A prompt is simply the input that you give to AI model to get desired o/p
+prompt is instructions + context + expectations
+
+What is Prompt engineering
+---------------------------
+art and science of how to ask questions
+its about designing inputs so that LLM gives reliable, accurate, usable o/ps
+
+- designing means - clarity, structure and constraints
+
+Why do we need strong prompt
+----------------------------
+- removes ambiguity
+- defines the task clearly
+- guide model to give best answer
+- minimise randomness and Hallucination
+
+Bad prompt -> 
+- vague input
+- unpridcitable o/p
+
+core 6 components of Prompt (RTC IOC)
+----------------------------------------
+
+use baby steps to analyse what LLM understood in case of attachments
+
+1. Role - who the model should act as
+or you define perspective and expertise
+
+why do we need role - to set the tone, improve domain expertise
+
+2. Task what to do - this is the most critical part
+   - be very specific
+   - be quantifiable - eg identify 3 key trends in my data
+
+3. context (Background Information)
+ - without context - generic answers
+ - with context - relevant answers
+
+4. Input data - actual content
+   in a form of excel, image, screen shots, word file, pdf
+
+
+5. output format - you need answer in bullet points, or paragraph or tabular format
+
+6. constraints (rules) - do not add explaination, limit to 50 words, use simple english language
+
+
+eg, Tell me about sales -> missing (Role, context, i/p data, o/p format, contraint)
+given - task to do
+
+
+---- some of the principles to achieve RTC IOC ---------------
+
+1. Be specific - 
+			Explain AI - not specific
+			explain AI in 3 bullet points for beginners - it is specific
+
+
+2. Reduce Freedom - means inconsistent o/p. control using temp and top P, top K
+3. use structure in o/ps - like table, bullets, JSON
+4. use examples when giving context 
+5. control the o/p - no explaination, exact format, only JSON
+
+---------- common mistakes while prompt writing ----------------
+1. mixing multiple tasks in one prompt. 
+2. by not supplying o/p format
+3. by giving too less context
+4. expecting perfect answers without constraints
+
+using prompt - you want AI to be predictable rather than creative guesser
+
+Types of Prompts
+-------------------
+1. Zero shot prompting - simplest prompting
+----------------------
+No examples given eg translate this into hindi - I love AI
+it will be less accurate for complex tasks
+
+2. One shot prompting
+-------------------- 
+one example given
+example - hello means Namaste
+Now give what is good morning
+
+
+3. Few step prompting
+-------------------
+multiple examples - better performance 
+eg cat is animal, apple is fruit what is car
+
+this will increase accuracy
+
+4. Instruction based prompting
+-------------------
+we give clear directives - eg write a professional mail to request leave
+
+5. Role based prompting
+-------------------
+Assign role to model eg you are a data scientist explain linear regression
+
+6. structured prompting
+-------------------
+define the strict format eg o/p should be in JSON format
+
+{
+	"name":string,
+	"age":number
+}
+
+7. Chain of thought
+-----------------------
+we encourage step by step reasoning
+generally used for complex problems
+2*9+3*(22/3-8)
+
+solve this step by step
+
+8. Constraint based prompting
+-------------------------
+We add rules to restrict the o/p
+eg ans in 50 words
+- need no explaination
+
+9. O/p formatting prompt
+----------------------
+here we enforce the the structure of o/p
+eg give in bullet points only
+
+
+10 prompt chaining
+-----------------
+break the task into multiple small tasks eg read the file, read the columns, find correlation etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
